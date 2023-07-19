@@ -1,12 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
+import './assets/fonts/efnwenecja.ttf';
 
 const GlobalStyle = createGlobalStyle`
-@import url();
 
 @font-face {
-  font-family: 'NK263';
-  src: local('NK263'), 
-    url("./fonts/nk263_medium.otf") format('otf');
+  font-family: 'PrimaryFont';
+  src: local('PrimaryFont'), 
+    url("../assets/fonts/efnwenecja.ttf") format('ttf');
   font-weight: 700;
 }
 
@@ -26,8 +26,6 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: center;
     overflow: hidden;
-
-    font-family: 'NK263'
   }
 
 `;

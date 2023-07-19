@@ -1,7 +1,7 @@
 {
-    "name": "Horizont-test-task",
+    "name": "",
     "version": "1.0.0",
-    "description": "Horizont-test-task",
+    "description": "Wedding invitation",
     "main": "./src/index.tsx",
     "scripts": {
         "start": "node server.js",
@@ -13,7 +13,7 @@
         "prettier:check": "npx prettier --list-different \"src/**/*.{ts,tsx}\"",
         "prettier:write": "yarn run prettier:base -- --write \"src/**/*.{ts,tsx}\""
     },
-    "repository": "https://github.com/andrej-a/horizont-testovoe-zadanie.git",
+    "repository": "https://github.com/andrej-a/wedding_invitation.git",
     "author": "Andrej Amelyanovich <amelyanovich.andrej@mail.ru>",
     "license": "MIT",
     "dependencies": {
