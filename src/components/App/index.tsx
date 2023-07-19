@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Main from '../Main';
 import PreviewOverlay from '../PreviewOverlay';
 
 type Props = {};
@@ -7,7 +8,8 @@ type Props = {};
 const App = (props: Props) => {
     return (
         <>
-            <PreviewOverlay />
+            {/*  <PreviewOverlay /> */}
+            <Main />
         </>
     );
 };

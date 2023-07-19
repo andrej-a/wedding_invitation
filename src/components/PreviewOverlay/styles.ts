@@ -1,5 +1,9 @@
 import styled, { css } from 'styled-components';
 
+import size from '../types/sizes';
+
+const { mobileS } = size;
+
 export const Container = styled.main<{ componentOpacity: number }>`
     position: fixed;
 
@@ -32,6 +36,10 @@ export const InitialsContainer = styled.div`
 
     font-family: 'Preview', serif;
     font-size: 350px;
+
+    @media (max-width: ${mobileS}px) {
+        font-size: 290px;
+    }
 `;
 
 export const HusbandInitials = styled.p`

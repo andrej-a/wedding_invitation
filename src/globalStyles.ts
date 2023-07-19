@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
 @font-face {
   font-family: 'Preview';
   src: local('Preview'), 
-    url("../src/assets/fonts/harmony-Regular.woff") format('woff');
+    url("../src/assets/fonts/harmony-Regular.woff") format('woff2');
   font-weight: 700;
 }
 
