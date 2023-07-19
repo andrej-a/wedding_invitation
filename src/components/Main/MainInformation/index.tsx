@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { stringConstants } from '@/components/types/constants';
+
 import {
     EventsDate,
     EventsDateContainer,
@@ -7,18 +9,22 @@ import {
     MainPeopleOnThisEventContainer,
     MainPeopleOnThisEventNames,
 } from './styles';
+import Timer from './Timer';
+
+const { NEWLYWEDS, STRING_WEDDING_DATE } = stringConstants;
 
 const MainInfoComponent = () => {
     return (
         <MainInfoContainer>
             <MainPeopleOnThisEventContainer>
                 <MainPeopleOnThisEventNames>
-                    Павел и Анастасия
+                    {NEWLYWEDS}
                 </MainPeopleOnThisEventNames>
             </MainPeopleOnThisEventContainer>
             <EventsDateContainer>
-                <EventsDate>30 СЕНТЯБРЯ 2023</EventsDate>
+                <EventsDate>{STRING_WEDDING_DATE}</EventsDate>
             </EventsDateContainer>
+            <Timer />
         </MainInfoContainer>
     );
 };

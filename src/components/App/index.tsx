@@ -8,7 +8,7 @@ type Props = {};
 const App = (props: Props) => {
     return (
         <>
-            {/*  <PreviewOverlay /> */}
+            <PreviewOverlay />
             <Main />
         </>
     );
