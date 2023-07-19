@@ -1,12 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
+
 import './assets/fonts/efnwenecja.ttf';
 
 const GlobalStyle = createGlobalStyle`
-
 @font-face {
-  font-family: 'PrimaryFont';
-  src: local('PrimaryFont'), 
-    url("../assets/fonts/efnwenecja.ttf") format('ttf');
+  font-family: 'Preview';
+  src: local('Preview'), 
+    url("../src/assets/fonts/harmony-Regular.woff") format('woff');
   font-weight: 700;
 }
 

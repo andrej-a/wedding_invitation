@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.main`
+export const Container = styled.main<{ componentOpacity: number }>`
     position: fixed;
 
     width: 100vw;
@@ -10,28 +10,38 @@ export const Container = styled.main`
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+    background-image: url('../src/assets/img/white-texture.jpg');
+
+    ${({ componentOpacity }) => {
+        if (!componentOpacity) {
+            return css`
+                transition: all 2s;
+                opacity: 0;
+            `;
+        }
+    }}
 `;
 
 export const InitialsContainer = styled.div`
     position: relative;
-    right: 15px;
+    right: 60px;
 
     width: auto;
     height: auto;
 
-    font-family: 'PrimaryFont, sans-serif';
-    font-size: 212px;
+    font-family: 'Preview', serif;
+    font-size: 350px;
 `;
 
 export const HusbandInitials = styled.p`
     position: relative;
     z-index: 1;
-    font-family: 'PrimaryFont, sans-serif';
 `;
 
 export const WifeInitials = styled.p`
     top: 0;
-    left: 70px;
+    left: 100px;
     position: absolute;
     z-index: 3;
 `;

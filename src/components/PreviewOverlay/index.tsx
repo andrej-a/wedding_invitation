@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import { numberConstants, stringConstants } from '../types/constants';
 import {
     Container,
     HusbandInitials,
@@ -6,16 +8,40 @@ import {
     WifeInitials,
 } from './styles';
 
-type Props = {};
+const { componentOpacityDelay } = numberConstants;
+const { wifeInitials, husbandInitials } = stringConstants;
 
-const PreviewOverlay = (props: Props) => {
+const PreviewOverlay = () => {
+    const [componentOpacity, setComponentOpacity] = useState(1);
+    const [isDisplayed, setIsDisplayed] = useState(true);
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            setComponentOpacity(0);
+        }, componentOpacityDelay);
+
+        return () => clearTimeout(timeoutId);
+    }, []);
+
+    useEffect(() => {
+        if (!componentOpacity) {
+            const timeoutId = setTimeout(() => {
+                setIsDisplayed(false);
+            }, componentOpacityDelay);
+
+            return () => clearTimeout(timeoutId);
+        }
+    }, [componentOpacity]);
+
     return (
-        <Container>
-            <InitialsContainer>
-                <HusbandInitials>П</HusbandInitials>
-                <WifeInitials>А</WifeInitials>
-            </InitialsContainer>
-        </Container>
+        isDisplayed && (
+            <Container componentOpacity={componentOpacity}>
+                <InitialsContainer>
+                    <HusbandInitials>{husbandInitials}</HusbandInitials>
+                    <WifeInitials>{wifeInitials}</WifeInitials>
+                </InitialsContainer>
+            </Container>
+        )
     );
 };
 
