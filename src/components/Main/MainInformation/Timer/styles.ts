@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import size from '@/components/types/sizes';
 
 const { mobileL, desktopL } = size;
@@ -8,17 +9,17 @@ export const TimerContainer = styled.div`
 `;
 
 export const TimerComponent = styled.p`
-    font-size: 14px;
+    font-size: 20px;
     color: #fff;
-    font-weight: 600;
-    letter-spacing: 3px;
+    font-weight: 100;
+    letter-spacing: 6px;
     font-family: 'Open Sans', Arial, sans-serif;
 
     @media (max-width: ${mobileL}px) {
-        font-size: 13px;
+        font-size: 15px;
     }
 
     @media (min-width: ${desktopL}px) {
-        font-size: 1vw;
+        font-size: 2vw;
     }
 `;

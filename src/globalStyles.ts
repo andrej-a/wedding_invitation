@@ -6,7 +6,14 @@ const GlobalStyle = createGlobalStyle`
 @font-face {
   font-family: 'Preview';
   src: local('Preview'), 
-    url("../src/assets/fonts/harmony-Regular.woff") format('woff2');
+    url("../src/assets/fonts/harmony-Regular.woff") format('woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Romanus';
+  src: local('Romanus'), 
+    url("../src/assets/fonts/ARomanus.woff") format('woff');
   font-weight: 700;
 }
 

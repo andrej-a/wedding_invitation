@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import size from '@/components/types/sizes';
 
 const { tablet, mobileL, desktopL } = size;
@@ -39,7 +40,7 @@ export const EventsDateContainer = styled.div`
 export const EventsDate = styled.p`
     font-size: 20px;
     color: #fff;
-    font-weight: 300;
+    font-weight: 100;
     letter-spacing: 6px;
     font-family: 'Open Sans', Arial, sans-serif;
 

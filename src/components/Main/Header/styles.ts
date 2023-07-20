@@ -23,12 +23,12 @@ export const HeaderTitleContainer = styled.div`
 `;
 
 export const HeaderTitle = styled.h1`
-    font-size: 154px;
+    font-size: 95px;
     color: #fff;
-    font-family: 'Preview';
+    font-family: 'Romanus';
 
     @media (max-width: ${mobileL}px) {
-        font-size: 100px;
+        font-size: 55px;
     }
 
     @media (min-width: ${desktopL}px) {

@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { stringConstants } from '@/components/types/constants';
+
 import { HeaderContainer, HeaderTitle, HeaderTitleContainer } from './styles';
 
 const { HEADER_TITLE } = stringConstants;

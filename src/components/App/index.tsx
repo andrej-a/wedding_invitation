@@ -1,15 +1,15 @@
 import React from 'react';
 
+import Invitation from '../Invitation';
 import Main from '../Main';
 import PreviewOverlay from '../PreviewOverlay';
 
-type Props = {};
-
-const App = (props: Props) => {
+const App = () => {
     return (
         <>
             <PreviewOverlay />
             <Main />
+            <Invitation />
         </>
     );
 };
