@@ -18,7 +18,7 @@ export const AppealToGuestContainer = styled.div`
 
 export const AppealToGuestContent = styled.p`
     font-family: 'Romanus';
-    font-size: 3vw;
+    font-size: 57px;
     font-weight: 100;
 `;
 
