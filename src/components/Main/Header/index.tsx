@@ -1,17 +1,15 @@
 import React from 'react';
+import { stringConstants } from '@/components/types/constants';
+import { HeaderContainer, HeaderTitle, HeaderTitleContainer } from './styles';
 
-import ImageComponent from '../../UI/ImageComponent';
-import { HeaderContainer, ImageContainer } from './styles';
+const { HEADER_TITLE } = stringConstants;
 
 const Header = () => {
     return (
         <HeaderContainer>
-            <ImageContainer>
-                <ImageComponent
-                    source="../src/assets/img/eternal_love.svg"
-                    alt="eternal_love"
-                />
-            </ImageContainer>
+            <HeaderTitleContainer>
+                <HeaderTitle>{HEADER_TITLE}</HeaderTitle>
+            </HeaderTitleContainer>
         </HeaderContainer>
     );
 };

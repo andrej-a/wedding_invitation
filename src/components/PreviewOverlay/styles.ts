@@ -6,6 +6,9 @@ const { mobileS } = size;
 
 export const Container = styled.main<{ componentOpacity: number }>`
     position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
 
     width: 100vw;
     min-height: 100vh;

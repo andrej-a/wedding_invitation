@@ -8,4 +8,5 @@ export enum stringConstants {
     WEDDING_DATE = '2023-09-30',
     NEWLYWEDS = 'Павел и Анастасия',
     STRING_WEDDING_DATE = '30 СЕНТЯБРЯ 2023',
+    HEADER_TITLE = 'eternal love',
 }

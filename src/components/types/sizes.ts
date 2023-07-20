@@ -6,6 +6,7 @@ enum size {
     laptop = 1024,
     laptopL = 1440,
     desktop = 1920,
+    desktopL = 2100,
 }
 
 export default size;

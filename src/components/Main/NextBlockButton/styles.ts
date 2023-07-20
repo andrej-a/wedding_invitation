@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    position: relative;
+    z-index: 1;
+
     width: 100vw;
     height: auto;
     min-height: 30px;
