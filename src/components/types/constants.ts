@@ -18,4 +18,5 @@ export enum stringConstants {
     MAP_BUTTON_TITLE = 'Перейти к карте',
     TIMING_TITLE = 'Тайминг',
     NO_EVENTS_DESCRIPTION = 'К сожалению, мы еще не придумали никаких развлечений. Но скоро здесь обязательно что-то появится!',
+    DETAILS_TITLE = 'Детали',
 }

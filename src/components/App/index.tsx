@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Details from '../Details';
 import Invitation from '../Invitation';
 import Location from '../Location';
 import Main from '../Main';
@@ -9,11 +10,12 @@ import Timing from '../Timing';
 const App = () => {
     return (
         <>
-            {/* <PreviewOverlay /> */}
+            <PreviewOverlay />
             <Main />
             <Invitation />
             <Timing />
             <Location />
+            <Details />
         </>
     );
 };

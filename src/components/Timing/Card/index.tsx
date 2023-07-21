@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import ITimingCard from '@/components/types/ITimingCard';
 
@@ -10,7 +10,7 @@ import {
     TimeContainer,
 } from './styles';
 
-const EventCard = ({ time, event, eventDescription }: ITimingCard) => {
+const EventCard = memo(({ time, event, eventDescription }: ITimingCard) => {
     return (
         <EventCardContainer>
             <TextContainer>
@@ -24,6 +24,6 @@ const EventCard = ({ time, event, eventDescription }: ITimingCard) => {
             </TextContainer>
         </EventCardContainer>
     );
-};
+});
 
 export default EventCard;
