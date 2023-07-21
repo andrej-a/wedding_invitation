@@ -8,7 +8,7 @@ export const InvitationContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 130px 0 200px 0;
+    padding: 130px 0 80px 0;
 
     background-color: #f4f4f4;
 `;
