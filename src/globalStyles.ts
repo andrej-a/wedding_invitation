@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
 @font-face {
   font-family: 'Romanus';
   src: local('Romanus'), 
-    url("../src/assets/fonts/ARomanus.woff") format('woff');
+    url("../src/assets/fonts/UniversityCyrillic.woff") format('woff');
   font-weight: 700;
 }
 

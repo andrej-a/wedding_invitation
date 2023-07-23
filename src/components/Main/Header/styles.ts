@@ -23,9 +23,11 @@ export const HeaderTitleContainer = styled.div`
 `;
 
 export const HeaderTitle = styled.h1`
-    font-size: 95px;
-    color: #fff;
     font-family: 'Romanus';
+    font-size: 58px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    color: #fff;
 
     @media (max-width: ${mobileL}px) {
         font-size: 55px;

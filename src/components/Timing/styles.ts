@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import size from '../types/sizes';
+
+const { tablet, mobileXL } = size;
+
 export const TimingContainer = styled.div`
     width: 100vw;
     height: auto;
@@ -10,11 +14,19 @@ export const TimingContainer = styled.div`
     padding: 0 20px 160px 20px;
 
     background-color: #f4f4f4;
+
+    @media (max-width: ${tablet}px) {
+        padding-bottom: 80px;
+    }
 `;
 
 export const TimingTitleContainer = styled.div`
     padding: 5px;
     margin-bottom: 40px;
+
+    @media (max-width: ${tablet}px) {
+        margin-bottom: 20px;
+    }
 `;
 
 export const TimingTitle = styled.p`
@@ -34,6 +46,10 @@ export const TimingInfoContainer = styled.div`
     align-items: center;
     flex-wrap: wrap;
     gap: 60px;
+
+    @media (max-width: ${mobileXL}px) {
+        gap: 30px;
+    }
 `;
 
 export const TextContainer = styled.div`

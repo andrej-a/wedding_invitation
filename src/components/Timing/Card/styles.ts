@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import size from '@/components/types/sizes';
+
+const { mobileXL } = size;
+
 export const EventCardContainer = styled.div`
     width: auto;
     height: auto;
@@ -21,6 +25,10 @@ export const TimeContainer = styled.p`
 export const EventContainer = styled(TimeContainer)`
     font-size: 36px;
     margin-bottom: 20px;
+
+    @media (max-width: ${mobileXL}px) {
+        margin-bottom: 0;
+    }
 `;
 
 export const EventDescription = styled.p`

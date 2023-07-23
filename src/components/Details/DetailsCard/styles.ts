@@ -10,6 +10,7 @@ export const DetailContainer = styled.div`
     padding: 20px 20px 30px 20px;
 
     background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
 `;
 
 export const TextContainer = styled.div`

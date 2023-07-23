@@ -27,7 +27,7 @@ export const DressTitle = styled.p`
 
 export const DressDescription = styled.p`
     width: auto;
-    max-width: 800px;
+    max-width: 500px;
 
     line-height: 25px;
     white-space: pre-line;

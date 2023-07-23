@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import size from '@/components/types/sizes';
+
+const { laptopX, laptop, mobileL } = size;
+
 export const DescriptionContent = styled.div`
     width: 50%;
     height: 100%;
@@ -10,22 +14,44 @@ export const DescriptionContent = styled.div`
     align-items: flex-start;
 
     gap: 30px;
+
+    @media (max-width: ${laptopX}px) {
+        align-items: center;
+    }
+
+    @media (max-width: ${laptop}px) {
+        width: 100vw;
+        gap: 10px;
+    }
 `;
 
 export const AppealToGuestContainer = styled.div`
     padding: 5px;
     width: auto;
     text-align: left;
+
+    @media (max-width: ${laptopX}px) {
+        text-align: center;
+        padding: 10px;
+    }
 `;
 
 export const AppealToGuestContent = styled.p`
     font-family: 'Romanus';
     font-size: 57px;
     font-weight: 100;
+
+    @media (max-width: ${mobileL}px) {
+        font-size: 42px;
+    }
 `;
 
 export const TextContainer = styled(AppealToGuestContainer)`
     max-width: 460px;
+
+    @media (max-width: ${mobileL}px) {
+        padding: 10px;
+    }
 `;
 
 export const TextContent = styled.p`
@@ -34,6 +60,10 @@ export const TextContent = styled.p`
     font-size: 16px;
     font-weight: 100;
     line-height: 25px;
+
+    @media (max-width: ${mobileL}px) {
+        font-size: 14px;
+    }
 `;
 
 export const DateContainer = styled(AppealToGuestContainer)`

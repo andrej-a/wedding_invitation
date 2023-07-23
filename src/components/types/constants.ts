@@ -1,6 +1,6 @@
 export enum numberConstants {
     componentOpacityDelay = 2000,
-    INTERSECTION_OBSERVER_DELAY = 1000,
+    INTERSECTION_OBSERVER_DELAY = 0,
 }
 
 export enum stringConstants {
