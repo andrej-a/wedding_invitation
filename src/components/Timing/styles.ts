@@ -19,7 +19,7 @@ export const TimingTitleContainer = styled.div`
 
 export const TimingTitle = styled.p`
     font-family: 'Romanus';
-    font-size: 72px;
+    font-size: 58px;
     font-weight: 100;
     letter-spacing: 3px;
     text-transform: capitalize;

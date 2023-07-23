@@ -7,7 +7,7 @@ export const DetailsContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 70px 20px;
+    padding: 60px 20px 110px 20px;
 
     background-color: #00000033;
 `;
@@ -19,7 +19,7 @@ export const DetailsTitleContainer = styled.div`
 
 export const DetailsTitle = styled.p`
     font-family: 'Romanus';
-    font-size: 72px;
+    font-size: 58px;
     font-weight: 100;
     letter-spacing: 3px;
     text-transform: capitalize;
