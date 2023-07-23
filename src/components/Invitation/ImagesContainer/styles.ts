@@ -3,28 +3,33 @@ import styled from 'styled-components';
 export const ImagesContainer = styled.div`
     position: relative;
 
-    width: auto;
+    width: 50%;
     height: auto;
+    display: flex;
+    justify-content: flex-start;
 `;
 
 export const MainImageContainer = styled.div`
-    width: 500px;
-    height: 565px;
+    width: 400px;
+    height: 450px;
 `;
 
 export const SecondImageContainer = styled.div`
+    width: 350px;
+    height: 200px;
+
     position: absolute;
     z-index: 1;
     top: 70%;
-    right: -30%;
+    right: 10%;
 `;
 
 export const InitialsContainer = styled.div`
     position: absolute;
     top: 55%;
-    right: -40%;
+    right: 10%;
 
-    font-size: 27vw;
+    font-size: 24vw;
     color: #00000033;
     font-family: 'Preview';
 `;

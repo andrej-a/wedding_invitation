@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const DescriptionContent = styled.div`
-    width: auto;
+    width: 50%;
     height: 100%;
 
     display: flex;
@@ -14,6 +14,8 @@ export const DescriptionContent = styled.div`
 
 export const AppealToGuestContainer = styled.div`
     padding: 5px;
+    width: auto;
+    text-align: left;
 `;
 
 export const AppealToGuestContent = styled.p`

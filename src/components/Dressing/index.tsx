@@ -17,10 +17,10 @@ const Dressing = () => {
             <TextContainer>
                 <DressTitle>{DRESS_TITLE}</DressTitle>
             </TextContainer>
-            <Colors />
             <TextContainer>
                 <DressDescription>{DRESS_DESCRIPTION}</DressDescription>
             </TextContainer>
+            <Colors />
         </DressContainer>
     );
 };

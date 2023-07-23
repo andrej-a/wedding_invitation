@@ -6,7 +6,7 @@ const { mobileL, desktopL } = size;
 
 export const HeaderContainer = styled.header`
     position: relative;
-    z-index: 1;
+    z-index: 3;
 
     width: 100vw;
     height: auto;

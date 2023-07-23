@@ -23,7 +23,7 @@ const DescriptionContainer = () => {
         <DescriptionContent>
             <AppealToGuestContainer>
                 <AppealToGuestContent>
-                    Дорогие, Данные с Сервера
+                    Дорогие Данные с Сервера!
                 </AppealToGuestContent>
             </AppealToGuestContainer>
 

@@ -22,3 +22,15 @@ export const VideoContainer = styled.video`
     height: 100vh;
     object-fit: cover;
 `;
+
+export const VideoOverlay = styled.div`
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.2;
+`;

@@ -16,22 +16,23 @@ export const InvitationContainer = styled.div`
 export const InvitationContent = styled.div`
     width: auto;
     height: auto;
+    width: 1200px;
+    padding: 20px;
 
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 70px;
 `;
 
 export const FormTriggerContainer = styled.div`
-    width: 100vw;
-    max-width: 1210px;
+    width: 1200px;
     height: auto;
     min-height: 50px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
     gap: 20px;
+    padding: 20px;
 
-    padding-top: 150px;
+    padding-top: 90px;
 `;

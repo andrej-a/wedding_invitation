@@ -7,7 +7,7 @@ export const DressContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 20px;
+    padding: 60px 20px 40px 20px;
 
     background-color: #f4f4f4;
 `;
@@ -29,10 +29,12 @@ export const DressDescription = styled.p`
     width: auto;
     max-width: 800px;
 
+    line-height: 25px;
+    white-space: pre-line;
     color: #000;
-    font-size: 32px;
+    font-size: 16px;
     font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 300;
+    font-weight: 100;
 
     opacity: 0.6;
 `;

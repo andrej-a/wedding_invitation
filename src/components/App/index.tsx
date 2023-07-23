@@ -12,7 +12,7 @@ import Timing from '../Timing';
 const App = () => {
     return (
         <>
-            <PreviewOverlay />
+            {/* <PreviewOverlay /> */}
             <Main />
             <Invitation />
             <Timing />
