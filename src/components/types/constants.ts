@@ -21,4 +21,5 @@ export enum stringConstants {
     DETAILS_TITLE = 'ДЕТАЛИ',
     DRESS_TITLE = 'ДРЕСС-КОД',
     DRESS_DESCRIPTION = 'Мы будем рады, если девушки выберут вечерние или коктейльные платья в пастельных тонах, а мужчины — костюм.',
+    FINAL_BLOCK_TITLE = 'ДО ВСТРЕЧИ!',
 }
