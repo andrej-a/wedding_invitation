@@ -18,7 +18,7 @@ module.exports = {
         new HotModuleReplacementPlugin(),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Свадебное приглашение',
+            title: 'Павел ♡ Анастасия',
             template: './public/index.html',
         }),
         new CopyWebpackPlugin({

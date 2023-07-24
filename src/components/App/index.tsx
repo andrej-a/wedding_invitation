@@ -2,6 +2,7 @@ import React from 'react';
 
 import Details from '../Details';
 import Dressing from '../Dressing';
+import ErrorBoundary from '../ErrorBoundary';
 import Final from '../Final';
 import Invitation from '../Invitation';
 import Location from '../Location';
@@ -11,8 +12,8 @@ import Timing from '../Timing';
 
 const App = () => {
     return (
-        <>
-            <PreviewOverlay />
+        <ErrorBoundary>
+            {/* <PreviewOverlay /> */}
             <Main />
             <Invitation />
             <Timing />
@@ -20,7 +21,7 @@ const App = () => {
             <Details />
             <Dressing />
             <Final />
-        </>
+        </ErrorBoundary>
     );
 };
 
