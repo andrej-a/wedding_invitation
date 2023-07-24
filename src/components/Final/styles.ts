@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import size from '../types/sizes';
+
+const { mobileXL, mobileM } = size;
+
 export const FinalBlockContainer = styled.div`
     width: 100vw;
     height: auto;
@@ -19,6 +23,10 @@ export const FinalBlockContainer = styled.div`
 
 export const TextContainer = styled.div`
     padding: 5px;
+
+    @media (max-width: ${mobileXL}px) {
+        text-align: center;
+    }
 `;
 
 export const FinalTitleContainer = styled.p`
@@ -31,6 +39,10 @@ export const FinalTitleContainer = styled.p`
     color: #fff;
 
     opacity: 0.7;
+
+    @media (max-width: ${mobileM}px) {
+        font-size: 90px;
+    }
 `;
 
 export const InitialsContainer = styled.div`
@@ -39,4 +51,12 @@ export const InitialsContainer = styled.div`
     font-size: 270px;
     font-family: 'Preview';
     color: #fff;
+
+    @media (max-width: ${mobileXL}px) {
+        right: 80px;
+    }
+
+    @media (max-width: ${mobileM}px) {
+        right: 60px;
+    }
 `;

@@ -21,7 +21,7 @@ const useIntersectionObserver = (
         }
 
         const options = {
-            threshold: [1],
+            threshold: [0.75],
         };
         const observer = new IntersectionObserver(onEntry, options);
 
