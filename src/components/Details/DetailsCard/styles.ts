@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import size from '@/components/types/sizes';
+
+const { mobileL } = size;
+
 export const DetailContainer = styled.div`
     width: 360px;
     height: 250px;
@@ -11,6 +15,12 @@ export const DetailContainer = styled.div`
 
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
+
+    @media (max-width: ${mobileL}px) {
+        width: 90vw;
+        min-height: 250px;
+        height: auto;
+    }
 `;
 
 export const TextContainer = styled.div`

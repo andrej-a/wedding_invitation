@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import size from '../types/sizes';
+
+const { tablet } = size;
+
 export const DressContainer = styled.div`
     width: 100vw;
     height: auto;
@@ -10,6 +14,10 @@ export const DressContainer = styled.div`
     padding: 60px 20px 40px 20px;
 
     background-color: #f4f4f4;
+
+    @media (max-width: ${tablet}px) {
+        padding: 40px 20px 20px 20px;
+    }
 `;
 
 export const TextContainer = styled.div`

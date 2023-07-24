@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import size from '../types/sizes';
+
+const { tablet } = size;
+
 export const LocationContainer = styled.div`
     width: 100vw;
     height: 100vh;
@@ -26,6 +30,11 @@ export const LocationContentContainer = styled.div`
     padding: 40px 60px;
 
     background-color: #fff;
+
+    @media (max-width: ${tablet}px) {
+        width: 80vw;
+        padding: 20px;
+    }
 `;
 
 export const LocationTitleContainer = styled.div`

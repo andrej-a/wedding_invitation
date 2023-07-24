@@ -59,10 +59,12 @@ export const TextContainer = styled.div`
 
 export const NoEventsDescription = styled.p`
     width: auto;
-    max-width: 800px;
+    max-width: 500px;
 
     color: #000;
-    font-size: 32px;
+    font-size: 16px;
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 300;
+
+    opacity: 0.6;
 `;
