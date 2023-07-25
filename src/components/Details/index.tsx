@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { stringConstants } from '../types/constants';
+import { stringConstants } from '../../types/constants';
 import { details } from './config/config';
 import Detail from './DetailsCard';
 import {

@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-import ITimingCard from '@/components/types/ITimingCard';
+import ITimingCard from '@/types/ITimingCard';
 
 import {
     EventCardContainer,

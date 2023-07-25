@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 
+import { stringConstants } from '../../types/constants';
 import { HusbandInitials, WifeInitials } from '../PreviewOverlay/styles';
-import { stringConstants } from '../types/constants';
 import {
     FinalBlockContainer,
     FinalTitleContainer,

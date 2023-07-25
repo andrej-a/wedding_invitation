@@ -1,6 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-import { stringConstants } from '../types/constants';
+import { stringConstants } from '../../types/constants';
 import { ErrorDescription, Wrapper } from './styles';
 
 const { UI_ERROR_MESSAGE } = stringConstants;

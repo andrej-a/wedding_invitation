@@ -1,4 +1,4 @@
-import { stringConstants } from '@/components/types/constants';
+import { stringConstants } from '@/types/constants';
 
 const { WEDDING_DATE } = stringConstants;
 

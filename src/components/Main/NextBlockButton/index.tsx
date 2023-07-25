@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import { useAppSelector } from '@/hooks/useStore';
 
 import ImageComponent from '../../UI/ImageComponent';
 import { Container, ImageContainer } from './styles';
 
 const NextBlockButton = () => {
+    const { scrollToCoordinates } = useAppSelector(state => state.mainSlice);
+
     return (
         <Container>
             <ImageContainer
-                onClick={() => alert('Здесь будет скролл к следующему блоку')}
+                onClick={() => window.scrollTo(0, scrollToCoordinates)}
             >
                 <ImageComponent
                     source="../src/assets/img/arrow.svg"

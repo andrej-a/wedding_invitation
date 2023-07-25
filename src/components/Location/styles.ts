@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import size from '../types/sizes';
+import size from '../../types/sizes';
 
 const { tablet } = size;
 
@@ -15,6 +15,10 @@ export const LocationContainer = styled.div`
     background-image: url('../src/assets/img/location_img.jpg');
     background-size: cover;
     background-position: center;
+
+    a {
+        text-decoration: none;
+    }
 `;
 
 export const LocationContentContainer = styled.div`

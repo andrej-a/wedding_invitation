@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import ITimingCard from '@/components/types/ITimingCard';
+import ITimingCard from '@/types/ITimingCard';
 
 const eventsConfig: ITimingCard[] = [
     {

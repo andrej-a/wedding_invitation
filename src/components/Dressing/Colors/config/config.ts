@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import IColor from '@/components/types/IColor';
+import IColor from '@/types/IColor';
 
 const config: IColor[] = [
     { id: uuidv4(), title: '#f8ced0' },

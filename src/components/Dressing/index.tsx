@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { stringConstants } from '../types/constants';
+import { stringConstants } from '../../types/constants';
 import Colors from './Colors';
 import {
     DressContainer,

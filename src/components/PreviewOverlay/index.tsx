@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { numberConstants, stringConstants } from '../types/constants';
+import { numberConstants, stringConstants } from '../../types/constants';
 import {
     Container,
     HusbandInitials,

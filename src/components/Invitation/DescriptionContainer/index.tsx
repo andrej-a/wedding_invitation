@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 
-import { stringConstants } from '@/components/types/constants';
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
+import { stringConstants } from '@/types/constants';
 import dateReverter from '@/utils/dateReverter';
 
 import {

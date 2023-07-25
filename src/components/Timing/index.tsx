@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { stringConstants } from '../types/constants';
-import ITimingCard from '../types/ITimingCard';
+import { stringConstants } from '../../types/constants';
+import ITimingCard from '../../types/ITimingCard';
 import EventCard from './Card';
 import eventsConfig from './config/config';
 import {

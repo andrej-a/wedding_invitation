@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import size from '@/components/types/sizes';
+import size from '@/types/sizes';
 
 const { laptop, tablet } = size;
 

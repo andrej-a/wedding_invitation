@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import IDetail from '@/components/types/IDetailsCard';
+import IDetail from '@/types/IDetailsCard';
 
 export const details: IDetail[] = [
     {

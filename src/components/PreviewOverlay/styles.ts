@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import size from '../types/sizes';
+import size from '../../types/sizes';
 
 const { mobileS } = size;
 

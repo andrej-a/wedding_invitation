@@ -1,6 +1,6 @@
 import React from 'react';
 
-import IDetail from '@/components/types/IDetailsCard';
+import IDetail from '@/types/IDetailsCard';
 
 import {
     DetailContainer,

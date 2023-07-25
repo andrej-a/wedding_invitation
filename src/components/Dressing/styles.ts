@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import size from '../types/sizes';
+import size from '../../types/sizes';
 
 const { tablet } = size;
 

@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 
-import { stringConstants } from '../types/constants';
+import { stringConstants } from '../../types/constants';
 import DefaultButton from '../UI/DefaultButton';
 import {
     LocationContainer,
@@ -31,13 +31,18 @@ const Location = () => {
                         {LOCATION_DESCRIPTION}
                     </LocationDescription>
                 </LocationDescriptionContainer>
-                <DefaultButton
-                    onClick={() => alert('Здесь перейдем в Яндекс.Карты')}
-                    ref={goToMapButtonRef}
-                    style={{ opacity: 0, transition: 'all 2s ease' }}
+                <a
+                    target="_blank"
+                    href="https://yandex.by/maps/geo/53176481/?ll=24.361991%2C52.215669&z=12.9"
+                    rel="noreferrer"
                 >
-                    {MAP_BUTTON_TITLE}
-                </DefaultButton>
+                    <DefaultButton
+                        ref={goToMapButtonRef}
+                        style={{ opacity: 0, transition: 'all 2s ease' }}
+                    >
+                        {MAP_BUTTON_TITLE}
+                    </DefaultButton>
+                </a>
             </LocationContentContainer>
         </LocationContainer>
     );

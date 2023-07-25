@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { numberConstants } from '@/components/types/constants';
+import { numberConstants } from '@/types/constants';
 
 const { INTERSECTION_OBSERVER_DELAY, componentOpacityDelay } = numberConstants;
 const useIntersectionObserver = (
