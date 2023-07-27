@@ -1,6 +1,8 @@
 export enum numberConstants {
     componentOpacityDelay = 2000,
     INTERSECTION_OBSERVER_DELAY = 0,
+    MIN_INPUT_SYMBOLS = 2,
+    MAX_INPUT_SYMBOLS = 35,
 }
 
 export enum stringConstants {
@@ -30,4 +32,9 @@ export enum stringConstants {
     FAVOURITE_DRINK_TITLE = 'Предпочтение по напиткам',
     FAVOURITE_DRINK_LABEL = 'можно выбрать несколько вариантов',
     SUBMIT_BUTTON_VALUE = 'Отправить',
+    INPUT_PLACEHOLDER = 'Оля и Женя, Аня (3 года)',
+    CHECKBOX_ERROR_MESSAGE = 'Обязательное поле',
+    REQUIRED_FIELD_MESSAGE = 'Поле обязательно для заполнения',
+    MISTAKE_VALUE_MESSAGE = 'Неверное значение',
+    TOO_MUCH_SYMBOLS_MESSAGE = 'Слишком много символов',
 }

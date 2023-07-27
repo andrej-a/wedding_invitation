@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { v4 as uuidv4 } from 'uuid';
-import * as yup from 'yup';
 
 import { useAppDispatch, useAppSelector } from '@/hooks/useStore';
 import { setShowModal } from '@/store/slices/main';
@@ -24,20 +23,7 @@ import {
     NameInput,
     TextContainer,
 } from './styles';
-
-yup.setLocale({
-    mixed: {
-        default: 'Неверное значение',
-        required: 'Поле обязательно для заполнения',
-    },
-    string: {
-        min: 'Поле обязательно для заполнения',
-        max: 'Слишком много символов',
-    },
-});
-export const schema = yup.object({
-    guests: yup.string().min(2).max(35).required(),
-});
+import { schema } from './config/schema';
 
 interface IForm {
     guests: string;
@@ -50,6 +36,8 @@ const {
     FAVOURITE_DRINK_TITLE,
     FAVOURITE_DRINK_LABEL,
     SUBMIT_BUTTON_VALUE,
+    INPUT_PLACEHOLDER,
+    CHECKBOX_ERROR_MESSAGE,
 } = stringConstants;
 
 const Form = () => {
@@ -102,7 +90,7 @@ const Form = () => {
                         name="guests"
                         type="text"
                         autoComplete="off"
-                        placeholder="Оля и Женя, Аня (3 года)"
+                        placeholder={INPUT_PLACEHOLDER}
                     />
                     <ErrorMessage>{errors.guests?.message}</ErrorMessage>
                 </InputFieldContainer>
@@ -124,7 +112,7 @@ const Form = () => {
                         },
                     )}
                     {isErrorMessage && (
-                        <ErrorMessage>Обязательное поле</ErrorMessage>
+                        <ErrorMessage>{CHECKBOX_ERROR_MESSAGE}</ErrorMessage>
                     )}
                 </InputFieldContainer>
 
