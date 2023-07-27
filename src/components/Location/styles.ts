@@ -37,7 +37,7 @@ export const LocationContentContainer = styled.div`
 
     @media (max-width: ${tablet}px) {
         width: 80vw;
-        padding: 20px;
+        padding: 20px 20px 40px 20px;
     }
 `;
 

@@ -14,6 +14,7 @@ import config from './config/config';
 import {
     CloseModalButton,
     DescriptionForm,
+    ErrorMessage,
     FormComponent,
     FormContainer,
     FormTitle,
@@ -24,9 +25,20 @@ import {
     TextContainer,
 } from './styles';
 
+yup.setLocale({
+    mixed: {
+        default: 'Неверное значение',
+        required: 'Поле обязательно для заполнения',
+    },
+    string: {
+        min: 'Поле обязательно для заполнения',
+        max: 'Слишком много символов',
+    },
+});
 export const schema = yup.object({
     guests: yup.string().min(2).max(35).required(),
 });
+
 interface IForm {
     guests: string;
 }
@@ -92,7 +104,7 @@ const Form = () => {
                         autoComplete="off"
                         placeholder="Оля и Женя, Аня (3 года)"
                     />
-                    {errors.guests?.message}
+                    <ErrorMessage>{errors.guests?.message}</ErrorMessage>
                 </InputFieldContainer>
 
                 <InputFieldContainer>
@@ -111,7 +123,9 @@ const Form = () => {
                             );
                         },
                     )}
-                    {isErrorMessage && 'Обязательное поле'}
+                    {isErrorMessage && (
+                        <ErrorMessage>Обязательное поле</ErrorMessage>
+                    )}
                 </InputFieldContainer>
 
                 <DefaultButton

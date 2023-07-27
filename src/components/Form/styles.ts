@@ -15,8 +15,16 @@ export const FormContainer = styled.div`
     align-items: center;
     gap: 20px;
     padding: 30px;
-
     background-color: #fff;
+
+    @media (max-width: ${mobileXL}px) {
+        max-height: 100vh;
+        padding: 15px 30px;
+    }
+
+    button {
+        margin: 0 auto;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -47,12 +55,7 @@ export const DescriptionForm = styled.p`
 export const FormComponent = styled.form`
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 10px;
-
     overflow: auto;
 `;
 
@@ -86,7 +89,7 @@ export const InputLabel = styled.label`
 `;
 
 export const NameInput = styled.input`
-    width: 100%;
+    width: 95%;
     border: 0;
     border-bottom: 1px solid #000;
     padding-bottom: 10px;
@@ -115,4 +118,11 @@ export const CloseModalButton = styled.button`
     @media (max-width: ${mobileXL}px) {
         right: 7%;
     }
+`;
+
+export const ErrorMessage = styled.p`
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    color: #ff3333;
 `;

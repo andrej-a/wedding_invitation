@@ -10,6 +10,7 @@ export const DefaultButtonElement = styled.button`
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
+    min-width: 160px;
 
     color: #fff;
     font-size: 16px;

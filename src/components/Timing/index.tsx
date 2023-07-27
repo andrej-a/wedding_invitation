@@ -15,7 +15,7 @@ import {
 
 const { TIMING_TITLE, NO_EVENTS_DESCRIPTION } = stringConstants;
 const Timing = () => {
-    const [events, setEvents] = useState<ITimingCard[]>(eventsConfig);
+    const [events, setEvents] = useState<ITimingCard[]>([]);
     return (
         <TimingContainer>
             <TimingTitleContainer>

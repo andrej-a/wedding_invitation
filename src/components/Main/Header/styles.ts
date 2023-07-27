@@ -24,14 +24,10 @@ export const HeaderTitleContainer = styled.div`
 
 export const HeaderTitle = styled.h1`
     font-family: 'Romanus';
-    font-size: 58px;
+    font-size: clamp(5vw, 8vw, 55px);
     font-weight: 100;
     letter-spacing: 3px;
     color: #fff;
-
-    @media (max-width: ${mobileL}px) {
-        font-size: 55px;
-    }
 
     @media (min-width: ${desktopL}px) {
         font-size: 10vw;

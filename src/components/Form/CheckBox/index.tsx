@@ -21,14 +21,16 @@ const Checkbox = ({ checkboxValue, registerValue, labelValue }: ICheckbox) => {
 
     return (
         <LabelCheckboxContainer>
-            <CheckboxInput
-                onChange={onHandleCheck}
-                value={checkboxValue}
-                id={registerValue}
-                name={registerValue}
-                type="checkbox"
-            />
-            <CheckBoxLabel htmlFor={registerValue}>{labelValue}</CheckBoxLabel>
+            <CheckBoxLabel htmlFor={registerValue}>
+                <CheckboxInput
+                    onChange={onHandleCheck}
+                    value={checkboxValue}
+                    id={registerValue}
+                    name={registerValue}
+                    type="checkbox"
+                />
+                {labelValue}
+            </CheckBoxLabel>
         </LabelCheckboxContainer>
     );
 };
