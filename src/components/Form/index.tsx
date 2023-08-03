@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { v4 as uuidv4 } from 'uuid';
 
 import { useAppDispatch, useAppSelector } from '@/hooks/useStore';
 import { setShowModal } from '@/store/slices/main';
@@ -10,6 +9,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import DefaultButton from '../UI/DefaultButton';
 import Checkbox from './CheckBox';
 import config from './config/config';
+import { schema } from './config/schema';
 import {
     CloseModalButton,
     DescriptionForm,
@@ -23,7 +23,6 @@ import {
     NameInput,
     TextContainer,
 } from './styles';
-import { schema } from './config/schema';
 
 interface IForm {
     guests: string;

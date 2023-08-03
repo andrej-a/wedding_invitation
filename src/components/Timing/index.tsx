@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
+import getAllEvents from '@/api/eventsAPI/getAllEvents';
+import sortEventsByTime from '@/utils/sortEventsBytime';
 
 import { stringConstants } from '../../types/constants';
 import ITimingCard from '../../types/ITimingCard';
 import EventCard from './Card';
-import eventsConfig from './config/config';
 import {
     NoEventsDescription,
     TextContainer,
@@ -16,6 +18,13 @@ import {
 const { TIMING_TITLE, NO_EVENTS_DESCRIPTION } = stringConstants;
 const Timing = () => {
     const [events, setEvents] = useState<ITimingCard[]>([]);
+
+    useEffect(() => {
+        getAllEvents().then(events => {
+            setEvents(events);
+        });
+    }, []);
+
     return (
         <TimingContainer>
             <TimingTitleContainer>
@@ -24,11 +33,11 @@ const Timing = () => {
 
             <TimingInfoContainer>
                 {events.length > 0 ? (
-                    events.map(({ id, time, event, eventDescription }) => {
+                    events.map(({ _id, time, event, eventDescription }) => {
                         return (
                             <EventCard
-                                key={id}
-                                id={id}
+                                key={_id}
+                                _id={_id}
                                 time={time}
                                 event={event}
                                 eventDescription={eventDescription}

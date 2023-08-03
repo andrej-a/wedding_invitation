@@ -1,5 +1,6 @@
-import React, { memo } from 'react';
+import React, { memo, useRef } from 'react';
 
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import ITimingCard from '@/types/ITimingCard';
 
 import {
@@ -11,6 +12,8 @@ import {
 } from './styles';
 
 const EventCard = memo(({ time, event, eventDescription }: ITimingCard) => {
+    const eventCardRef = useRef<HTMLDivElement>(null);
+    useIntersectionObserver([eventCardRef]);
     return (
         <EventCardContainer>
             <TextContainer>
@@ -20,7 +23,12 @@ const EventCard = memo(({ time, event, eventDescription }: ITimingCard) => {
                 <EventContainer>{event}</EventContainer>
             </TextContainer>
             <TextContainer>
-                <EventDescription>{eventDescription}</EventDescription>
+                <EventDescription
+                    style={{ opacity: 0, transition: 'all 2s ease' }}
+                    ref={eventCardRef}
+                >
+                    {eventDescription}
+                </EventDescription>
             </TextContainer>
         </EventCardContainer>
     );

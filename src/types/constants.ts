@@ -16,7 +16,7 @@ export enum stringConstants {
     ACCEPT_INVITATION = 'Подтвердить',
     REDJECT_INVITATION = 'Отклонить',
     LOCATION_TITLE = 'ЛОКАЦИЯ',
-    LOCATION_DESCRIPTION = 'Наша свадьба пройдет в Усадьбе Villa Michetti — этомаленькая Италия в часе езды от Москвы. \n \n Она находится по адресу: д. Бережки, Солнечногорский р-н.',
+    LOCATION_DESCRIPTION = 'Наша свадьба пройдет в Усадьбе Villa Michetti — это маленькая Италия в часе езды от Москвы. \n \n Она находится по адресу: д. Бережки, Солнечногорский р-н.',
     MAP_BUTTON_TITLE = 'Перейти к карте',
     TIMING_TITLE = 'ТАЙМИНГ',
     NO_EVENTS_DESCRIPTION = 'К сожалению, мы еще не добавили ничего в расписание. Но скоро здесь обязательно что-то появится!',
@@ -32,9 +32,32 @@ export enum stringConstants {
     FAVOURITE_DRINK_TITLE = 'Предпочтение по напиткам',
     FAVOURITE_DRINK_LABEL = 'можно выбрать несколько вариантов',
     SUBMIT_BUTTON_VALUE = 'Отправить',
+    CANCEL_BUTTON_VALUE = 'Отменить',
     INPUT_PLACEHOLDER = 'Оля и Женя, Аня (3 года)',
     CHECKBOX_ERROR_MESSAGE = 'Обязательное поле',
     REQUIRED_FIELD_MESSAGE = 'Поле обязательно для заполнения',
     MISTAKE_VALUE_MESSAGE = 'Неверное значение',
     TOO_MUCH_SYMBOLS_MESSAGE = 'Слишком много символов',
+}
+
+export enum APIConstants {
+    URL = 'http://localhost:3001/',
+    GET_ALL_EVENTS = 'events/get',
+    DELETE_EVENT = 'events/deleteEvent',
+    UPDATE_EVENT = 'events/updateEvent',
+    CREATE_EVENT = 'events/createEvent',
+}
+
+export enum adminPannelConstants {
+    EVENTS_PANNEL_TITLE = 'Панель событий',
+    CHANGE_EVENT_TITLE = 'Редактировать ',
+    CREATE_EVENT_TITLE = 'Создать ',
+    TIME_INPUT_LABEL = 'Время в формате чч:мм',
+    TIME_INPUT_PLACEHOLDER = '15:00',
+    EVENT_INPUT_LABEL = 'Название события',
+    EVENT_INPUT_PLACEHOLDER = 'Название события',
+    EVENT_DESCRIPTION_INPUT_LABEL = 'Описание события',
+    EVENT_DESCRIPTION_INPUT_PLACEHOLDER = 'Описание события',
+    CREATE_EVENT_BUTTON_TITLE = 'Добавить событие',
+    CONFIRM_DELETION_MESSAGE = 'Вы уверены, что хотите удалить:',
 }

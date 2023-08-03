@@ -1,31 +1,18 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import { useAppSelector } from '@/hooks/useStore';
+import AdminPanel from '@/pages/Admin';
+import MainPage from '@/pages/Main';
 
-import Details from '../Details';
-import Dressing from '../Dressing';
 import ErrorBoundary from '../ErrorBoundary';
-import Final from '../Final';
-import Invitation from '../Invitation';
-import Location from '../Location';
-import Main from '../Main';
-import Modal from '../Modal';
-import PreviewOverlay from '../PreviewOverlay';
-import Timing from '../Timing';
 
 const App = () => {
-    const { isShowModal } = useAppSelector(store => store.mainSlice);
     return (
         <ErrorBoundary>
-            <PreviewOverlay />
-            <Main />
-            <Invitation />
-            <Timing />
-            <Location />
-            <Details />
-            <Dressing />
-            <Final />
-            {isShowModal && <Modal />}
+            <Routes>
+                <Route path="/" element={<MainPage />} />
+                <Route path="/admin" element={<AdminPanel />} />
+            </Routes>
         </ErrorBoundary>
     );
 };

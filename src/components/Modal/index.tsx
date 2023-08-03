@@ -6,7 +6,11 @@ import { useAppSelector } from '@/hooks/useStore';
 import Form from '../Form';
 import { Overlay } from './styles';
 
-const Modal = () => {
+interface IModalWindowProps {
+    children: React.ReactNode;
+}
+
+const Modal = ({ children }: IModalWindowProps) => {
     const { isShowModal } = useAppSelector(store => store.mainSlice);
     useEffect(() => {
         document.body.style.overflow = isShowModal ? 'hidden' : '';
@@ -15,12 +19,7 @@ const Modal = () => {
         };
     }, [isShowModal]);
 
-    return createPortal(
-        <Overlay>
-            <Form />
-        </Overlay>,
-        document.body,
-    );
+    return createPortal(<Overlay>{children}</Overlay>, document.body);
 };
 
 export default Modal;

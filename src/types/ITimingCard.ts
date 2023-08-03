@@ -1,5 +1,5 @@
 interface ITimingCard {
-    id: string;
+    _id: string;
     time: string;
     event: string;
     eventDescription: string;

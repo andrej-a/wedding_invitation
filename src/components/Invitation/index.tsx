@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
-import { useAppDispatch } from '@/hooks/useStore';
+import { useAppDispatch, useAppSelector } from '@/hooks/useStore';
 import { setScrollToCoordinates, setShowModal } from '@/store/slices/main';
 
 import { stringConstants } from '../../types/constants';
+import Form from '../Form';
+import Modal from '../Modal';
 import DefaultButton from '../UI/DefaultButton';
 import DescriptionContainer from './DescriptionContainer';
 import ImagesContent from './ImagesContainer';
@@ -17,6 +19,7 @@ import {
 const { ACCEPT_INVITATION, REDJECT_INVITATION } = stringConstants;
 
 const Invitation = () => {
+    const { isShowModal } = useAppSelector(store => store.mainSlice);
     const acceptButtonRef = useRef<HTMLButtonElement>(null);
     const rejectButtonRef = useRef<HTMLButtonElement>(null);
     const targetElement = useRef<HTMLDivElement>(null);
@@ -67,6 +70,11 @@ const Invitation = () => {
                     {ACCEPT_INVITATION}
                 </DefaultButton>
             </FormTriggerContainer>
+            {isShowModal && (
+                <Modal>
+                    <Form />
+                </Modal>
+            )}
         </InvitationContainer>
     );
 };

@@ -7,9 +7,10 @@ const { mobileXL } = size;
 export const EventCardContainer = styled.div`
     width: auto;
     height: auto;
+    min-height: 230px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
 `;
 

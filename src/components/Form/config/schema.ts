@@ -1,5 +1,6 @@
 import * as yup from 'yup';
-import { stringConstants, numberConstants } from '@/types/constants';
+
+import { numberConstants, stringConstants } from '@/types/constants';
 
 const {
     REQUIRED_FIELD_MESSAGE,
