@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { useAppDispatch, useAppSelector } from '@/hooks/useStore';
-import { setShowModal } from '@/store/slices/main';
+import { setShowUserModalForm } from '@/store/slices/main';
 import { stringConstants } from '@/types/constants';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -123,7 +123,7 @@ const Form = () => {
             </FormComponent>
             <CloseModalButton
                 onClick={() => {
-                    dispatch(setShowModal(false));
+                    dispatch(setShowUserModalForm(false));
                 }}
             >
                 X

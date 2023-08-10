@@ -1,8 +1,9 @@
+import { IGuest } from './IGuest';
 import ITimingCard from './ITimingCard';
 
 export interface ICreateOrUpdateModalProps {
     type: 'create' | 'update';
-    payload: ITimingCard;
+    payload: ITimingCard | IGuest;
 }
 
 export interface IUPDATE_OR_CREATE_FORM {
@@ -11,7 +12,7 @@ export interface IUPDATE_OR_CREATE_FORM {
     eventDescription: string;
 }
 
-export interface IManageFormProps {
+export interface IDeleteItemFormProps {
     type: 'events' | 'guests';
     _id: string;
     description: string;

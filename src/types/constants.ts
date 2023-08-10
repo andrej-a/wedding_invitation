@@ -46,12 +46,17 @@ export enum APIConstants {
     DELETE_EVENT = 'events/deleteEvent',
     UPDATE_EVENT = 'events/updateEvent',
     CREATE_EVENT = 'events/createEvent',
+    GET_ALL_GUESTS = 'guests/getAllGuests',
+    DELETE_GUEST = 'guests/deleteGuest',
+    CREATE_GUEST = 'guests/createGuest',
+    UPDATE_GUEST = 'guests/updateGuest',
 }
 
 export enum adminPannelConstants {
     EVENTS_PANNEL_TITLE = 'Панель событий',
-    CHANGE_EVENT_TITLE = 'Редактировать ',
-    CREATE_EVENT_TITLE = 'Создать ',
+    GUESTS_PANEL_TITLE = 'Приглашенные гости',
+    CHANGE_TITLE = 'Редактировать ',
+    CREATE_TITLE = 'Создать ',
     TIME_INPUT_LABEL = 'Время в формате чч:мм',
     TIME_INPUT_PLACEHOLDER = '15:00',
     EVENT_INPUT_LABEL = 'Название события',
@@ -60,4 +65,9 @@ export enum adminPannelConstants {
     EVENT_DESCRIPTION_INPUT_PLACEHOLDER = 'Описание события',
     CREATE_EVENT_BUTTON_TITLE = 'Добавить событие',
     CONFIRM_DELETION_MESSAGE = 'Вы уверены, что хотите удалить:',
+    CREATE_GUEST_BUTTON_TITLE = 'Добавить гостя',
+    NAME_GUEST_INPUT_LABEL = 'Имя или несколько имен',
+    NAME_GUEST_INPUT_PLACEHOLDER = 'Иванна и Олег',
+    GENDER_INPUT_LABEL = 'Пол (если гостей несколько, то выберите что угодно)',
+    GUESTS_NUMBER_LABEL = 'Количество гостей',
 }

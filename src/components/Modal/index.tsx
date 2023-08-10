@@ -11,13 +11,13 @@ interface IModalWindowProps {
 }
 
 const Modal = ({ children }: IModalWindowProps) => {
-    const { isShowModal } = useAppSelector(store => store.mainSlice);
+    const { isShowUserModalForm } = useAppSelector(store => store.mainSlice);
     useEffect(() => {
-        document.body.style.overflow = isShowModal ? 'hidden' : '';
+        document.body.style.overflow = isShowUserModalForm ? 'hidden' : '';
         return () => {
             document.body.style.overflow = '';
         };
-    }, [isShowModal]);
+    }, [isShowUserModalForm]);
 
     return createPortal(<Overlay>{children}</Overlay>, document.body);
 };

@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import deleteEvent from '@/api/eventsAPI/deleteEvent';
 import getAllEvents from '@/api/eventsAPI/getAllEvents';
+import deleteGuest from '@/api/guestsAPI/deleteGuest';
+import getAllGuests from '@/api/guestsAPI/getAllGuests';
 import DefaultButton from '@/components/UI/DefaultButton';
 import { useAppDispatch } from '@/hooks/useStore';
-import { setEvents, setShowModal } from '@/store/slices/main';
+import {
+    setEvents,
+    setGuests,
+    setShowUserModalForm,
+} from '@/store/slices/main';
+import { adminPannelConstants, stringConstants } from '@/types/constants';
+import { IDeleteItemFormProps } from '@/types/modalInterfaces';
 
 import {
     ButtonsContainer,
@@ -12,27 +20,26 @@ import {
     FormContainer,
     TextContainer,
 } from './styles';
-import { IManageFormProps } from '@/types/modalInterfaces';
-import { adminPannelConstants, stringConstants } from '@/types/constants';
 
 const { CONFIRM_DELETION_MESSAGE } = adminPannelConstants;
 const { CANCEL_BUTTON_VALUE, SUBMIT_BUTTON_VALUE } = stringConstants;
 
-const DeleteForm = ({ _id, type, description }: IManageFormProps) => {
+const DeleteForm = memo(({ _id, type, description }: IDeleteItemFormProps) => {
     const dispatch = useAppDispatch();
+
     return (
         <FormContainer>
             <TextContainer>
                 <ConfirmMessage>
                     {CONFIRM_DELETION_MESSAGE}
-                    <strong>{description}</strong>?
+                    <strong> {description}</strong>?
                 </ConfirmMessage>
             </TextContainer>
 
             <ButtonsContainer>
                 <DefaultButton
                     onClick={() => {
-                        dispatch(setShowModal(false));
+                        dispatch(setShowUserModalForm(false));
                     }}
                 >
                     {CANCEL_BUTTON_VALUE}
@@ -47,7 +54,16 @@ const DeleteForm = ({ _id, type, description }: IManageFormProps) => {
                                     );
                                 }
                             });
-                            dispatch(setShowModal(false));
+                            dispatch(setShowUserModalForm(false));
+                        } else {
+                            deleteGuest(_id).then(status => {
+                                if (status) {
+                                    getAllGuests().then(guests =>
+                                        dispatch(setGuests(guests)),
+                                    );
+                                }
+                                dispatch(setShowUserModalForm(false));
+                            });
                         }
                     }}
                 >
@@ -56,6 +72,6 @@ const DeleteForm = ({ _id, type, description }: IManageFormProps) => {
             </ButtonsContainer>
         </FormContainer>
     );
-};
+});
 
 export default DeleteForm;

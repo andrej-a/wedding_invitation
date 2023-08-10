@@ -1,29 +1,37 @@
+import { IGuest } from '@/types/IGuest';
 import ITimingCard from '@/types/ITimingCard';
+import { IDeleteItemFormProps } from '@/types/modalInterfaces';
 import { TPayload } from '@/types/TPayload';
 import { createSlice } from '@reduxjs/toolkit';
 
 export interface IMainInitialState {
-    isShowModal: boolean;
+    isShowUserModalForm: boolean;
     isShowUpdateOrCreateModal: boolean;
+    isShowUpdateOrCreateGuestModal: boolean;
     favouriteDrinks: string[];
     scrollToCoordinates: number;
     events: ITimingCard[];
+    guests: IGuest[];
+    currentDeletionItem: IDeleteItemFormProps;
 }
 
 export const initialState: IMainInitialState = {
-    isShowModal: false,
+    isShowUserModalForm: false,
     isShowUpdateOrCreateModal: false,
+    isShowUpdateOrCreateGuestModal: false,
     favouriteDrinks: [],
     scrollToCoordinates: 0,
     events: [],
+    guests: [],
+    currentDeletionItem: {} as IDeleteItemFormProps,
 };
 
 const solutionSlice = createSlice({
     name: 'mainSlice',
     initialState,
     reducers: {
-        setShowModal: (state, { payload }: TPayload<boolean>) => {
-            state.isShowModal = payload;
+        setShowUserModalForm: (state, { payload }: TPayload<boolean>) => {
+            state.isShowUserModalForm = payload;
         },
         setShowUpdateOrCreateModal: (state, { payload }: TPayload<boolean>) => {
             state.isShowUpdateOrCreateModal = payload;
@@ -42,16 +50,34 @@ const solutionSlice = createSlice({
         setEvents: (state, { payload }: TPayload<ITimingCard[]>) => {
             state.events = payload;
         },
+        setGuests: (state, { payload }: TPayload<IGuest[]>) => {
+            state.guests = payload;
+        },
+        setCurrentDeletionItem: (
+            state,
+            { payload }: TPayload<IDeleteItemFormProps>,
+        ) => {
+            state.currentDeletionItem = payload;
+        },
+        setShowUpdateOrCreateGuestModal: (
+            store,
+            { payload }: TPayload<boolean>,
+        ) => {
+            store.isShowUpdateOrCreateGuestModal = payload;
+        },
     },
 });
 
 const { actions, reducer } = solutionSlice;
 export const {
-    setShowModal,
+    setShowUserModalForm,
     addFavouriteDrink,
     removeFavouriteDrink,
     setScrollToCoordinates,
     setEvents,
     setShowUpdateOrCreateModal,
+    setGuests,
+    setCurrentDeletionItem,
+    setShowUpdateOrCreateGuestModal,
 } = actions;
 export default reducer;
