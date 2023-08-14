@@ -3,5 +3,6 @@
     "buildCommand": "yarn run build",
     "installCommand": "yarn install",
     "framework": null,
-    "outputDirectory": "./dist"
+    "outputDirectory": "./dist",
+    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
