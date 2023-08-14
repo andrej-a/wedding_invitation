@@ -85,6 +85,7 @@ const UpdateOrCreateGuestForm = (props: ICreateOrUpdateModalProps) => {
                 gender,
                 status: 'not checked',
                 drinks: [],
+                guests: '',
             }).then(status => {
                 status ? updateGuestsStateAndCloseForm() : null;
             });
@@ -96,6 +97,7 @@ const UpdateOrCreateGuestForm = (props: ICreateOrUpdateModalProps) => {
                 gender,
                 status: 'not checked',
                 drinks: [],
+                guests: '',
             }).then(status => {
                 status ? updateGuestsStateAndCloseForm() : null;
             });

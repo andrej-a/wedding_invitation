@@ -50,6 +50,7 @@ export enum APIConstants {
     DELETE_GUEST = 'guests/deleteGuest',
     CREATE_GUEST = 'guests/createGuest',
     UPDATE_GUEST = 'guests/updateGuest',
+    GET_GUEST_BY_ID = 'guests/getGuestByID',
 }
 
 export enum adminPannelConstants {
@@ -68,6 +69,6 @@ export enum adminPannelConstants {
     CREATE_GUEST_BUTTON_TITLE = 'Добавить гостя',
     NAME_GUEST_INPUT_LABEL = 'Имя или несколько имен',
     NAME_GUEST_INPUT_PLACEHOLDER = 'Иванна и Олег',
-    GENDER_INPUT_LABEL = 'Пол (если гостей несколько, то выберите что угодно)',
+    GENDER_INPUT_LABEL = 'Пол (если гостей несколько, то указывать не нужно)',
     GUESTS_NUMBER_LABEL = 'Количество гостей',
 }

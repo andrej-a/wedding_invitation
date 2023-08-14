@@ -13,17 +13,20 @@ import {
     TextContainer,
     TextContent,
 } from './styles';
+import { useAppSelector } from '@/hooks/useStore';
+import getInvitation from '@/utils/getInvitation';
 
 const { INVITATION_TEXT, WEDDING_DATE } = stringConstants;
 
 const DescriptionContainer = () => {
     const dateContainerRef = useRef<HTMLDivElement>(null);
+    const { currentGuest } = useAppSelector(store => store.mainSlice);
     useIntersectionObserver([dateContainerRef]);
     return (
         <DescriptionContent>
             <AppealToGuestContainer>
                 <AppealToGuestContent>
-                    Дорогие Данные с Сервера!
+                    {getInvitation(currentGuest)}, {currentGuest.name}!
                 </AppealToGuestContent>
             </AppealToGuestContainer>
 

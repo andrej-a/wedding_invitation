@@ -13,6 +13,7 @@ export interface IMainInitialState {
     events: ITimingCard[];
     guests: IGuest[];
     currentDeletionItem: IDeleteItemFormProps;
+    currentGuest: IGuest;
 }
 
 export const initialState: IMainInitialState = {
@@ -24,6 +25,7 @@ export const initialState: IMainInitialState = {
     events: [],
     guests: [],
     currentDeletionItem: {} as IDeleteItemFormProps,
+    currentGuest: {} as IGuest,
 };
 
 const solutionSlice = createSlice({
@@ -65,6 +67,9 @@ const solutionSlice = createSlice({
         ) => {
             store.isShowUpdateOrCreateGuestModal = payload;
         },
+        setCurrentGuest: (state, { payload }: TPayload<IGuest>) => {
+            state.currentGuest = payload;
+        },
     },
 });
 
@@ -79,5 +84,6 @@ export const {
     setGuests,
     setCurrentDeletionItem,
     setShowUpdateOrCreateGuestModal,
+    setCurrentGuest,
 } = actions;
 export default reducer;

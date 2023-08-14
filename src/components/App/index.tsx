@@ -10,7 +10,7 @@ const App = () => {
     return (
         <ErrorBoundary>
             <Routes>
-                <Route path="/" element={<MainPage />} />
+                <Route path="/:userID" element={<MainPage />} />
                 <Route path="/admin" element={<AdminPanel />} />
             </Routes>
         </ErrorBoundary>

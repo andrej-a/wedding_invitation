@@ -87,10 +87,11 @@ const TableComponent = memo(
                                 </TableRow>
                             );
                         }
-                        const { _id, name, status, drinks } = item;
+                        const { _id, name, status, drinks, guests } = item;
                         return (
                             <TableRow key={_id}>
                                 <BodyCell>{name}</BodyCell>
+                                <BodyCell>{guests}</BodyCell>
                                 <BodyCell>{_id}</BodyCell>
                                 <BodyCell>{drinks.join(', ')}</BodyCell>
                                 <BodyCell>{status}</BodyCell>

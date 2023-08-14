@@ -4,7 +4,6 @@ import * as yup from 'yup';
 const schema = yup.object({
     name: yup.string().required(),
     numberOfGuests: yup.string().required(),
-    gender: yup.string().required(),
 });
 
 const radioGenderValues = [

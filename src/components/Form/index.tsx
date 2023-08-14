@@ -23,6 +23,8 @@ import {
     NameInput,
     TextContainer,
 } from './styles';
+import updateGuest from '@/api/guestsAPI/updateGuest';
+import useGuests from '@/hooks/useGuests';
 
 interface IForm {
     guests: string;
@@ -41,9 +43,13 @@ const {
 
 const Form = () => {
     const formRef = useRef<HTMLFormElement>(null);
-    const { favouriteDrinks } = useAppSelector(state => state.mainSlice);
+    const { favouriteDrinks, currentGuest } = useAppSelector(
+        state => state.mainSlice,
+    );
     const [isErrorMessage, setIsErrorMessage] = useState(false);
     const dispatch = useAppDispatch();
+    const { getGuestByIDAndSetToState, updateGuestAndSetItToStore } =
+        useGuests();
 
     const onSetErrorMessage = (status: boolean) => {
         setIsErrorMessage(status);
@@ -59,7 +65,12 @@ const Form = () => {
         if (!favouriteDrinks.length) {
             onSetErrorMessage(true);
         } else {
-            console.log(guests, favouriteDrinks);
+            updateGuestAndSetItToStore({
+                ...currentGuest,
+                guests,
+                drinks: favouriteDrinks,
+                status: 'confirm',
+            });
         }
     };
     const {
@@ -68,7 +79,7 @@ const Form = () => {
         formState: { errors },
     } = useForm<IForm>({
         resolver: yupResolver(schema),
-        defaultValues: { guests: '' },
+        defaultValues: { guests: currentGuest.guests },
     });
     return (
         <FormContainer>

@@ -10,8 +10,6 @@ const getAllGuests = async (): Promise<IGuest[]> => {
         const response: AxiosResponse<any, any> = await axios.get(
             `${URL}${GET_ALL_GUESTS}`,
         );
-        console.log(response);
-
         const guests: IGuest[] = response.data.guest;
         return guests;
     } catch (error) {

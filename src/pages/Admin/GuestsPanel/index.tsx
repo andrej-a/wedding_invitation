@@ -33,6 +33,7 @@ const GuestsPanel = () => {
             payload: {
                 _id: '',
                 name: '',
+                guests: '',
                 numberOfGuests: '',
                 gender: '',
                 drinks: [],

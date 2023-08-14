@@ -10,7 +10,6 @@ const updateGuest = async (guest: IGuest): Promise<boolean> => {
     try {
         const res = axios.patch(`${URL}${UPDATE_GUEST}`, guest);
         if ((await res).status === 201) {
-            alert(`Success status: ${(await res).status}`);
             return true;
         }
         alert(`Error status: ${(await res).status}`);
