@@ -42,7 +42,7 @@ export enum stringConstants {
 }
 
 export enum APIConstants {
-    URL = 'http://localhost:3001/',
+    URL = 'https://white-dibbler-cuff.cyclic.cloud/',
     PREFIX = 'https://wedding-invitation-liard.vercel.app/',
     GET_ALL_EVENTS = 'events/get',
     DELETE_EVENT = 'events/deleteEvent',
