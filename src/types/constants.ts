@@ -38,10 +38,12 @@ export enum stringConstants {
     REQUIRED_FIELD_MESSAGE = 'Поле обязательно для заполнения',
     MISTAKE_VALUE_MESSAGE = 'Неверное значение',
     TOO_MUCH_SYMBOLS_MESSAGE = 'Слишком много символов',
+    SERVER_ERROR = 'Непредвиденная ошибка на сервере',
 }
 
 export enum APIConstants {
     URL = 'http://localhost:3001/',
+    PREFIX = 'https://wedding-invitation-liard.vercel.app/',
     GET_ALL_EVENTS = 'events/get',
     DELETE_EVENT = 'events/deleteEvent',
     UPDATE_EVENT = 'events/updateEvent',

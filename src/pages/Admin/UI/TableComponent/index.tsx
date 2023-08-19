@@ -16,10 +16,11 @@ import {
     IDeleteItemFormProps,
 } from '@/types/modalInterfaces';
 import { checkIfItsEventInstance } from '@/utils/instanceChecker';
-
-import DeleteForm from '../DeleteForm';
 import Heads from './Heads';
 import { BodyCell, ImageContainer, Table, TableBody, TableRow } from './styles';
+import { APIConstants } from '@/types/constants';
+
+const { PREFIX } = APIConstants;
 
 interface ITableProps {
     heads: string[];
@@ -92,7 +93,10 @@ const TableComponent = memo(
                             <TableRow key={_id}>
                                 <BodyCell>{name}</BodyCell>
                                 <BodyCell>{guests}</BodyCell>
-                                <BodyCell>{_id}</BodyCell>
+                                <BodyCell>
+                                    {PREFIX}
+                                    {_id}
+                                </BodyCell>
                                 <BodyCell>{drinks.join(', ')}</BodyCell>
                                 <BodyCell>{status}</BodyCell>
                                 <BodyCell>

@@ -3,10 +3,12 @@ import { useAppDispatch, useAppSelector } from './useStore';
 import { setCurrentGuest } from '@/store/slices/main';
 import { IGuest } from '@/types/IGuest';
 import updateGuest from '@/api/guestsAPI/updateGuest';
+import { useNavigate } from 'react-router-dom';
 
 const useGuests = () => {
     const { currentGuest } = useAppSelector(store => store.mainSlice);
     const dispatch = useAppDispatch();
+    const navigate = useNavigate();
 
     const getGuestByIDAndSetToState = () => {
         getGuestByID(currentGuest._id).then(guest => {
@@ -23,7 +25,7 @@ const useGuests = () => {
                         updateGuest({ ...guest, status: 'checked' });
                     }
                 } else {
-                    alert('NO THIS GUEST');
+                    navigate('/');
                 }
             });
         }

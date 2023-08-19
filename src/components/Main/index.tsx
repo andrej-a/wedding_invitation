@@ -9,7 +9,7 @@ import { MainContainer, VideoContainer, VideoOverlay } from './styles';
 const Main = () => {
     return (
         <MainContainer>
-            {/* <VideoContainer src={videoBg} autoPlay loop muted /> */}
+            <VideoContainer src={videoBg} autoPlay loop muted />
             <VideoOverlay />
             <Header />
             <MainInfoComponent />

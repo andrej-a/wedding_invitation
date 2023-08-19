@@ -1,21 +1,22 @@
 import axios, { AxiosResponse } from 'axios';
 
-import { APIConstants } from '@/types/constants';
-
+import { APIConstants, stringConstants } from '@/types/constants';
+import toast from 'react-hot-toast';
 const { URL, DELETE_GUEST } = APIConstants;
+const { SERVER_ERROR } = stringConstants;
 
 const deleteGuest = async (_id: string): Promise<boolean> => {
     try {
         const res = axios.delete(`${URL}${DELETE_GUEST}`, { data: { _id } });
         if ((await res).status === 201) {
-            alert(`Success status: ${(await res).status}`);
+            toast.success(`Success status: ${(await res).status}`);
             return true;
         }
-        alert(`Error status: ${(await res).status}`);
+        toast.error(`Error status: ${(await res).status}`);
         return false;
     } catch (error) {
         console.error(error);
-        alert('Возникла ошибка');
+        toast.error(SERVER_ERROR);
         return false;
     }
 };

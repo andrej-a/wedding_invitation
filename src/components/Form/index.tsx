@@ -48,8 +48,7 @@ const Form = () => {
     );
     const [isErrorMessage, setIsErrorMessage] = useState(false);
     const dispatch = useAppDispatch();
-    const { getGuestByIDAndSetToState, updateGuestAndSetItToStore } =
-        useGuests();
+    const { updateGuestAndSetItToStore } = useGuests();
 
     const onSetErrorMessage = (status: boolean) => {
         setIsErrorMessage(status);
@@ -71,6 +70,7 @@ const Form = () => {
                 drinks: favouriteDrinks,
                 status: 'confirm',
             });
+            dispatch(setShowUserModalForm(false));
         }
     };
     const {
